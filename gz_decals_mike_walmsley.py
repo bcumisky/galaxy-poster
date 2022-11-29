@@ -23,7 +23,7 @@ def interactive_galaxies(df):
         'merging': ['merger', 'major-disturbance', 'minor-disturbance', 'none']
     }
 
-    st.sidebar.markdown('# Choose Your Galaxies')
+    st.sidebar.markdown('# Choose Your Galaxiess')
     # st.sidebar.markdown('---')
     current_selection = {}
     for question, answers in questions.items():
