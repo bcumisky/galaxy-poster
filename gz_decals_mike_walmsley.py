@@ -11,6 +11,7 @@ import tensorflow_probability as tfp
 from PIL import Image
 
 def main(df):
+
     interactive_galaxies(df)
 
 
@@ -22,8 +23,12 @@ def interactive_galaxies(df):
         'spiral-winding': ['tight', 'medium', 'loose'],
         'merging': ['merger', 'major-disturbance', 'minor-disturbance', 'none']
     }
+    # could make merging yes/no
 
-    st.sidebar.markdown('# Choose Your Galaxiess')
+    # st.sidebar.markdown('# Show posteriors')
+    # show_posteriors = st.sidebar.selectbox('Posteriors for which question?', ['none'] + list(questions.keys()), format_func=lambda x: x.replace('-', ' ').capitalize())
+
+    st.sidebar.markdown('# Choose Your Galaxies')
     # st.sidebar.markdown('---')
     current_selection = {}
     for question, answers in questions.items():
@@ -191,5 +196,3 @@ if __name__ == '__main__':
 
     main(df)
 
-
-# https://discuss.streamlit.io/t/values-slider/9434 streamlit sharing has a temp bug that sliders only show the top value
