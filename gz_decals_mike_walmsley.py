@@ -11,23 +11,7 @@ import tensorflow_probability as tfp
 from PIL import Image
 
 def main(df):
-    st.title('Bayesian Deep Learning for Galaxy Zoo DECaLS')
-    st.subheader('by Mike Walmsley ([@mike\_walmsley\_](https://twitter.com/mike_walmsley_))')
 
-    st.markdown(
-    """
-    
-    <br><br/>
-    Galaxy Zoo DECaLS includes deep learning classifications for all galaxies. 
-
-    Our model learns from volunteers and predicts posteriors for every Galaxy Zoo question.
-
-    Explore the predictions using the filters on the left. Do you agree with the model?
-
-    To read more about how the model works, click below.
-
-    """
-    , unsafe_allow_html=True)
     should_tell_me_more = st.button('Tell me more')
     if should_tell_me_more:
         tell_me_more()
@@ -296,6 +280,7 @@ def load_data():
     df_locs = ['decals_{}.csv'.format(n) for n in range(4)]
     dfs = [pd.read_csv(df_loc) for df_loc in df_locs]
     return pd.concat(dfs)
+
 
 
 if __name__ == '__main__':
