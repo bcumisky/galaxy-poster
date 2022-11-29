@@ -10,11 +10,6 @@ import tensorflow as tf
 import tensorflow_probability as tfp
 from PIL import Image
 
-def main(df):
-
-    interactive_galaxies(df)
-
-
 def interactive_galaxies(df):
     questions = {
         'bar': ['strong', 'weak', 'no'], 
@@ -194,5 +189,4 @@ if __name__ == '__main__':
 
     df = load_data()
 
-    main(df)
-
+    interactive_galaxies(df)
