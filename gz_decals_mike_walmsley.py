@@ -23,7 +23,7 @@ def interactive_galaxies(df):
     # st.sidebar.markdown('# Show posteriors')
     # show_posteriors = st.sidebar.selectbox('Posteriors for which question?', ['none'] + list(questions.keys()), format_func=lambda x: x.replace('-', ' ').capitalize())
 
-    st.sidebar.markdown('# Choose Your Galaxies')
+    st.sidebar.markdown('# Choose Your Galaxiess')
     # st.sidebar.markdown('---')
     current_selection = {}
     for question, answers in questions.items():
